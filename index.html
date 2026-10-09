@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heritage Design Group Inc. (website concept)</title>
+<meta name="description" content="Website concept for Heritage Design Group Inc. of Smithtown, NY: backyard design, front yard landscaping, walkways, stonework and decks. Rated 5.0 on Google.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --green:#1d3a2a;--green-2:#27503a;--green-3:#335f45;--stone:#d9cab1;--stone-l:#efe7d9;--cream:#faf6ee;--brass:#b08d57;--brass-d:#7c5f2f;--ink:#1a221d;--muted:#4d5650;
+ --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:72px;--s8:112px;
+ --wrap:1200px;--r:3px;
+ --serif:"Playfair Display",Georgia,"Times New Roman",serif;--sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);font-size:18px;line-height:1.65;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-style:normal;font-weight:600;line-height:1.1;margin:0}
+em,i{font-style:normal}
+p{margin:0 0 var(--s3)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s5)}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:var(--s2) var(--s3);z-index:100}
+.skip:focus{left:var(--s3);top:var(--s3)}
+.orn{display:flex;align-items:center;gap:var(--s3);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-d);margin-bottom:var(--s3)}
+.orn::before,.orn::after{content:"";height:1px;width:32px;background:currentColor}
+.orn.center{justify-content:center}
+.on-dark .orn{color:var(--brass)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);min-height:52px;padding:0 var(--s5);border-radius:var(--r);font:700 1rem var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s}
+.btn-brass{background:var(--brass);color:#1a1408}.btn-brass:hover{background:#c39e66}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green-3)}
+.btn-out{border-color:rgba(239,231,217,.7);color:var(--stone-l);background:transparent}.btn-out:hover{background:var(--stone-l);color:var(--green)}
+.btn-out-d{border-color:var(--green);color:var(--green);background:transparent}.btn-out-d:hover{background:var(--green);color:#fff}
+.btn svg{width:18px;height:18px}
+
+.concept{background:#101a14;color:#e6e2d8;font-size:.82rem;text-align:center;padding:var(--s2) var(--s3)}
+.concept a{color:#fff;font-weight:700}
+
+header.site{background:var(--green);color:var(--stone-l);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(176,141,87,.4)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:80px}
+.brand{display:flex;align-items:center;gap:var(--s3);text-decoration:none}
+.brand svg{width:52px;height:52px;flex:none}
+.brand b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:600;color:#fff;line-height:1.1}
+.brand small{display:block;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+nav#nav ul{display:flex;gap:var(--s4);list-style:none;margin:0;padding:0}
+nav#nav a{text-decoration:none;font-weight:600;font-size:.95rem;display:inline-block;padding:var(--s3) 0;min-height:44px;color:var(--stone-l)}
+nav#nav a:hover{color:var(--brass)}
+.hd-r{display:flex;gap:var(--s3);align-items:center}
+.menu-btn{display:none;width:48px;height:48px;border:1.5px solid var(--brass);background:transparent;border-radius:var(--r);cursor:pointer;color:var(--stone-l)}
+.menu-btn svg{width:22px;height:22px}
+
+/* hero */
+.hero{background:var(--green);color:var(--stone-l);padding:var(--s7) 0 var(--s8);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 96px)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:var(--s7);align-items:center}
+.hero h1{font-size:clamp(2.6rem,5vw,4.6rem);color:#fff;letter-spacing:-.01em}
+.hero h1 .br{color:var(--brass)}
+.hero p.lede{font-size:1.15rem;color:#d7d3c7;margin-top:var(--s4);max-width:30em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s5)}
+.team-line{margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid rgba(176,141,87,.35);font-size:.95rem;color:#cfcabd}
+.team-line b{color:#fff}
+.arch{position:relative;border:1.5px solid var(--brass);border-radius:300px 300px 0 0;padding:14px;aspect-ratio:4/5}
+.arch-in{border:1px solid rgba(176,141,87,.5);border-radius:290px 290px 0 0;overflow:hidden;height:100%;background:#22432f}
+.arch-in svg{display:block;width:100%;height:100%}
+.arch-cap{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);background:var(--green);padding:0 var(--s3);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);white-space:nowrap}
+.lamp{animation:flick 4s ease-in-out infinite alternate}
+@keyframes flick{from{opacity:.75}to{opacity:1}}
+
+/* proof */
+.proof{background:var(--stone);border-bottom:1px solid rgba(29,58,42,.15)}
+.proof .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--s3) var(--s5);padding-top:var(--s4);padding-bottom:var(--s4);text-align:center}
+.proof b{font-family:var(--serif);font-size:1.6rem;color:var(--green)}
+.proof span{font-size:.95rem;color:var(--muted)}
+.proof .dot{width:6px;height:6px;background:var(--brass);transform:rotate(45deg)}
+.stars{display:inline-flex;gap:2px;vertical-align:middle;margin-left:var(--s2)}
+.stars svg{width:18px;height:18px}
+
+/* services tabs */
+.services{padding:var(--s8) 0}
+.sec-head{text-align:center;max-width:44em;margin:0 auto var(--s6)}
+.sec-head h2{font-size:clamp(2.2rem,4vw,3.4rem);color:var(--green)}
+.sec-head p{color:var(--muted);margin-top:var(--s3)}
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:0;border-bottom:1px solid rgba(29,58,42,.2);margin-bottom:var(--s6)}
+.tabs button{font:600 1rem var(--sans);background:none;border:0;border-bottom:3px solid transparent;padding:var(--s3) var(--s4);min-height:52px;cursor:pointer;color:var(--muted);margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--green);border-bottom-color:var(--brass)}
+.tabs button:hover{color:var(--green)}
+.panel{display:grid;grid-template-columns:1fr 1fr;gap:var(--s7);align-items:center}
+.panel[hidden]{display:none}
+.panel h3{font-size:2.2rem;color:var(--green);margin-bottom:var(--s3)}
+.panel p{color:var(--muted)}
+.panel .note{display:inline-block;margin-top:var(--s2);font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-d)}
+.panel ul{padding:0;margin:var(--s4) 0 0;list-style:none}
+.panel li{padding:var(--s2) 0 var(--s2) var(--s5);position:relative;border-top:1px solid rgba(29,58,42,.12)}
+.panel li::before{content:"";position:absolute;left:4px;top:19px;width:8px;height:8px;background:var(--brass);transform:rotate(45deg)}
+.vignette{background:var(--stone-l);border:1px solid rgba(176,141,87,.5);padding:var(--s4);border-radius:var(--r)}
+.vignette svg{display:block;width:100%;height:auto}
+
+/* planner */
+.planner{background:var(--stone-l);padding:var(--s8) 0}
+.pl-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:var(--s6);align-items:start}
+.planner h2{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--green)}
+.sample-tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-d);border:1px solid var(--brass);padding:2px var(--s2);margin-bottom:var(--s3)}
+.toggles{list-style:none;padding:0;margin:var(--s5) 0 0;border-top:1px solid rgba(29,58,42,.2)}
+.toggles li{border-bottom:1px solid rgba(29,58,42,.2)}
+.toggles label{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);min-height:60px;cursor:pointer;font-weight:600;color:var(--green)}
+.toggles label small{display:block;font-weight:400;color:var(--muted);font-size:.88rem}
+.switch{position:relative;width:52px;height:30px;flex:none}
+.switch input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.switch i{position:absolute;inset:0;border-radius:30px;background:#c8bfae;transition:background .2s}
+.switch i::after{content:"";position:absolute;left:3px;top:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.switch input:checked + i{background:var(--green-3)}
+.switch input:checked + i::after{transform:translateX(22px)}
+.switch input:focus-visible + i{outline:3px solid var(--brass);outline-offset:2px}
+.yard{background:#fff;border:1px solid rgba(176,141,87,.6);padding:var(--s3);border-radius:var(--r);box-shadow:0 30px 60px -40px rgba(29,58,42,.6)}
+.yard svg{display:block;width:100%;height:auto}
+.yard .el{opacity:0;transition:opacity .5s ease}
+.yard .el.on{opacity:1}
+.yard .dusk{opacity:0;transition:opacity .6s}
+.yard.lit .dusk{opacity:1}
+.wish{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s3);margin-top:var(--s3)}
+.wish p{margin:0;color:var(--muted);font-size:.95rem}
+.wish b{color:var(--green)}
+
+/* reviews */
+.reviews{padding:var(--s8) 0;background:var(--cream)}
+.rv-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s5);align-items:stretch}
+.rv-main{background:var(--green);color:#fff;padding:var(--s6);border-radius:var(--r);position:relative}
+.rv-main::before{content:"\201C";font-family:var(--serif);position:absolute;top:var(--s3);left:var(--s5);font-size:7rem;line-height:1;color:var(--brass)}
+.rv-main blockquote{margin:var(--s7) 0 0;font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.3}
+.rv-main figcaption{margin-top:var(--s4);color:var(--brass);font-weight:700}
+.rv-side{display:grid;gap:var(--s4)}
+.rv-side figure{margin:0;border-top:2px solid var(--brass);padding-top:var(--s3)}
+.rv-side blockquote{margin:0;font-family:var(--serif);font-size:1.3rem;line-height:1.4;color:var(--green)}
+.rv-side figcaption{margin-top:var(--s2);font-size:.9rem;color:var(--muted);font-weight:600}
+figure{margin:0}
+
+/* booking add-on */
+.booking{background:var(--green);color:var(--stone-l);padding:var(--s8) 0}
+.bk-head{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--s6);align-items:end;margin-bottom:var(--s6)}
+.booking h2{font-size:clamp(2.2rem,4vw,3.4rem);color:#fff}
+.bk-head p{color:#d2cec2}
+.price-box{border:1.5px solid var(--brass);padding:var(--s4);border-radius:var(--r)}
+.price-box .p{font-family:var(--serif);font-size:2.6rem;color:#fff;line-height:1}
+.price-box .p small{font-family:var(--sans);font-size:.9rem;color:#d2cec2;margin-left:var(--s2)}
+.price-box ul{margin:var(--s3) 0 0;padding:0 0 0 var(--s4);color:#e2ded3;font-size:.96rem}
+.sample-note{font-size:.9rem;color:#d2cec2;border-left:3px solid var(--brass);padding-left:var(--s3);margin-top:var(--s4)}
+.bk-card{background:var(--cream);color:var(--ink);border-radius:var(--r);padding:var(--s5);display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s6)}
+.bk-card h3{font-size:1.4rem;color:var(--green);margin-bottom:var(--s3)}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s2)}
+.days label,.times label{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:72px;border:1.5px solid rgba(29,58,42,.25);border-radius:var(--r);cursor:pointer;background:#fff;text-align:center;line-height:1.2;padding:var(--s2) var(--s1)}
+.days label small{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.days label b{font-family:var(--serif);font-size:1.5rem;color:var(--green)}
+.days label span{font-size:.75rem;color:var(--muted)}
+.days input,.times input{position:absolute;opacity:0;pointer-events:none}
+.days label:has(input:checked),.times label:has(input:checked){background:var(--green);border-color:var(--green)}
+.days label:has(input:checked) *,.times label:has(input:checked){color:#fff}
+.days label:has(input:focus-visible),.times label:has(input:focus-visible){outline:3px solid var(--brass);outline-offset:2px}
+.times{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);margin-top:var(--s2)}
+.times label{min-height:52px;font-weight:700;color:var(--green)}
+.choice{margin-top:var(--s4);padding:var(--s3);background:var(--stone-l);border-radius:var(--r);font-size:.95rem;color:var(--green);min-height:56px}
+.field{display:flex;flex-direction:column;gap:var(--s1);margin-bottom:var(--s3)}
+.field label{font-weight:700;font-size:.9rem;color:var(--green)}
+.field input,.field textarea{font:inherit;font-size:1rem;min-height:50px;padding:var(--s2) var(--s3);border:1.5px solid rgba(29,58,42,.3);border-radius:var(--r);background:#fff;color:var(--ink)}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(176,141,87,.35)}
+.msg{display:none;color:#9b2c1f;font-size:.85rem;font-weight:700}
+.err .msg,.field.err .msg{display:block}
+.field.err input{border-color:#9b2c1f}
+.grp-err{display:none;color:#9b2c1f;font-size:.85rem;font-weight:700;margin-top:var(--s2)}
+.grp-err.show{display:block}
+.demo-note{font-size:.85rem;color:var(--muted);margin:var(--s3) 0 0}
+.done{background:var(--cream);color:var(--ink);border-radius:var(--r);padding:var(--s6) var(--s5)}
+.done h3{font-size:2rem;color:var(--green);margin-bottom:var(--s3)}
+.done:focus{outline:none}
+
+/* visit */
+.visit{padding:var(--s8) 0;background:var(--cream)}
+.vs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1.5px solid var(--brass);border-radius:var(--r)}
+.vs > div{padding:var(--s5)}
+.vs > div + div{border-left:1px solid rgba(176,141,87,.5)}
+.vs h3{font-size:1.4rem;color:var(--green);margin-bottom:var(--s3)}
+.vs p{color:var(--muted)}
+.vs .tel{font-family:var(--serif);font-size:1.6rem;color:var(--green);text-decoration:none;display:inline-block;min-height:44px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:var(--s2) 0;border-bottom:1px dotted rgba(29,58,42,.3)}
+.hours td+td{text-align:right;font-weight:700;color:var(--green)}
+
+footer{background:#122318;color:#cfcabd;padding:var(--s7) 0 var(--s6);font-size:.95rem}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--s6)}
+footer h4{font-family:var(--sans);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:0 0 var(--s3)}
+footer a{color:#fff}
+footer p{margin:0 0 var(--s2)}
+.disc{margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid rgba(176,141,87,.3);font-size:.86rem;color:#aaa697;max-width:72em}
+.sticky-call{display:none}
+
+@media (max-width:1024px){
+ .hero-grid,.pl-grid,.rv-grid,.bk-head,.bk-card,.panel{grid-template-columns:1fr}
+ .arch{max-width:460px;margin:0 auto;width:100%}
+ .pl-grid{gap:var(--s4)}
+ .pl-grid > div:first-child{display:contents}
+ .pl-grid .toggles{order:2;margin-top:0}
+ .pl-grid > div:last-child{order:1}
+ .ft{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+ nav#nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--green);border-bottom:1px solid var(--brass)}
+ nav#nav.open{display:block}
+ nav#nav ul{flex-direction:column;gap:0;padding:var(--s2) var(--s5) var(--s4)}
+ nav#nav a{display:block;border-bottom:1px solid rgba(176,141,87,.25)}
+ .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+ .vs{grid-template-columns:1fr}
+ .vs > div + div{border-left:0;border-top:1px solid rgba(176,141,87,.5)}
+}
+@media (max-width:640px){
+ body{font-size:17px}
+ .wrap{padding:0 var(--s3)}
+ .hd-r .btn{display:none}
+ .brand b{font-size:1.05rem}
+ .hero{padding:var(--s6) 0 var(--s7)}
+ .proof .dot{display:none}
+ .proof .wrap{gap:var(--s2) var(--s4)}
+ .tabs{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+ .tabs button{white-space:nowrap;padding:var(--s3)}
+ .rv-main{padding:var(--s5) var(--s4)}
+ .bk-card{padding:var(--s4) var(--s3)}
+ .days{grid-template-columns:repeat(5,1fr);gap:var(--s1)}
+ .days label b{font-size:1.2rem}
+ .days label span{display:none}
+ .ft{grid-template-columns:1fr}
+ .sticky-call{display:flex;position:fixed;left:var(--s3);right:var(--s3);bottom:var(--s3);z-index:60;min-height:56px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+ footer{padding-bottom:112px}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="concept">Website concept by <a href="https://www.lisettecolon.com">Lisette Colon</a>. A sample, not the official Heritage Design Group Inc. site.</div>
+
+<header class="site">
+ <div class="wrap hd">
+  <a class="brand" href="#top" aria-label="Heritage Design Group, home">
+   <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M6 50V24a20 20 0 0 1 40 0v26z" fill="none" stroke="#b08d57" stroke-width="1.6"/><path d="M10 50V25a16 16 0 0 1 32 0v25" fill="#27503a"/><text x="26" y="40" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="15" font-weight="600" fill="#efe7d9">HDG</text><path d="M26 12c-3 3-3 6 0 8 3-2 3-5 0-8z" fill="#b08d57"/></svg>
+   <span><b>Heritage Design Group</b><small>Smithtown, New York</small></span>
+  </a>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#planner">Plan a backyard</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#book">Book a consultation</a></li>
+    <li><a href="#visit">Visit</a></li>
+   </ul>
+  </nav>
+  <div class="hd-r">
+   <a class="btn btn-brass" href="tel:+16315435040"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>(631) 543-5040</a>
+   <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+  </div>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero on-dark" id="top">
+ <div class="wrap hero-grid">
+  <div>
+   <p class="orn">Landscape design, Smithtown</p>
+   <h1>Backyards, walkways and stonework, <span class="br">laid by craftsmen.</span></h1>
+   <p class="lede">Heritage Design Group designs and builds backyards, front yard landscapes, walkways, stonework and decks for homes around Smithtown.</p>
+   <div class="hero-actions">
+    <a class="btn btn-brass" href="#book">Book a design consultation</a>
+    <a class="btn btn-out" href="tel:+16315435040">Call (631) 543-5040</a>
+   </div>
+   <p class="team-line">Clients name <b>Ray</b> and <b>Jonathan</b> in their reviews. Rated <b>5.0</b> across <b>63</b> Google reviews.</p>
+  </div>
+  <div class="arch">
+   <div class="arch-in">
+    <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Engraving-style illustration of a backyard at dusk: a stone walkway curving to a flagstone patio with a fire pit, a low stone wall and lantern lights.">
+     <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3a2a"/><stop offset="1" stop-color="#3b6248"/></linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#f3d79a" stop-opacity=".9"/><stop offset="1" stop-color="#f3d79a" stop-opacity="0"/></radialGradient>
+     </defs>
+     <rect width="400" height="500" fill="url(#sky)"/>
+     <circle cx="300" cy="80" r="26" fill="#efe7d9" opacity=".85"/><circle cx="312" cy="72" r="24" fill="#2a4a36" opacity=".9"/>
+     <g fill="#efe7d9" opacity=".6"><circle cx="90" cy="70" r="1.6"/><circle cx="150" cy="40" r="1.2"/><circle cx="230" cy="60" r="1.4"/><circle cx="360" cy="130" r="1.2"/><circle cx="60" cy="130" r="1.2"/></g>
+     <!-- distant trees -->
+     <g fill="#2a4a36"><path d="M0 230 Q30 150 60 210 Q80 140 120 200 Q150 150 170 215 L170 260 L0 260Z"/><path d="M230 220 Q260 140 300 200 Q330 130 370 190 Q390 170 400 200 L400 260 L230 260Z"/></g>
+     <!-- house back -->
+     <g stroke="#b08d57" stroke-width="1.5" fill="#22432f"><path d="M140 250 V180 L200 140 L260 180 V250Z"/><rect x="180" y="200" width="40" height="50" fill="#f3d79a" opacity=".55"/><path d="M200 200v50M180 222h40" stroke="#b08d57"/></g>
+     <!-- lawn -->
+     <path d="M0 250 H400 V500 H0Z" fill="#2f5a40"/>
+     <g stroke="#3b6a4d" stroke-width="1" fill="none"><path d="M0 290 Q200 270 400 290M0 340 Q200 315 400 340M0 400 Q200 370 400 400"/></g>
+     <!-- stone wall -->
+     <g stroke="#7c6a4c" stroke-width="1" fill="#cbb994">
+      <path d="M20 300 Q120 285 160 290 L160 312 Q110 306 20 322Z"/>
+      <path d="M240 290 Q300 285 380 300 L380 322 Q300 306 240 312Z"/>
+     </g>
+     <g stroke="#9c8762" stroke-width=".8" fill="none"><path d="M40 304v14M62 300v16M86 297v14M110 294v14M136 292v14M260 293v14M285 291v14M310 292v14M335 294v14M360 298v14"/><path d="M20 311 Q100 298 160 301M240 301 Q300 296 380 311"/></g>
+     <!-- patio + fire pit -->
+     <ellipse cx="200" cy="350" rx="120" ry="36" fill="#bfae8a" stroke="#7c6a4c" stroke-width="1.5"/>
+     <g stroke="#9c8762" stroke-width=".9" fill="none"><path d="M120 340 l30 6 l-6 14 M170 330 l20 10 l40 -4 M250 334 l-10 14 l40 6 M150 360 l40 8 l30 -6 M110 352 l14 10"/></g>
+     <ellipse cx="200" cy="348" rx="26" ry="9" fill="#5d4c34" stroke="#2a2216" stroke-width="1.5"/>
+     <path class="lamp" d="M192 346 Q196 330 200 322 Q204 332 208 346Z" fill="#f0b45a"/>
+     <circle class="lamp" cx="200" cy="336" r="40" fill="url(#glow)" opacity=".6"/>
+     <!-- walkway stepping stones -->
+     <g fill="#cbb994" stroke="#7c6a4c" stroke-width="1.2">
+      <ellipse cx="205" cy="402" rx="30" ry="9"/><ellipse cx="190" cy="426" rx="34" ry="10"/><ellipse cx="208" cy="452" rx="38" ry="11"/><ellipse cx="188" cy="482" rx="44" ry="12"/>
+     </g>
+     <!-- plantings -->
+     <g fill="#3f7454" stroke="#1d3a2a" stroke-width="1"><circle cx="60" cy="380" r="26"/><circle cx="96" cy="400" r="18"/><circle cx="330" cy="384" r="28"/><circle cx="300" cy="410" r="16"/><circle cx="40" cy="450" r="30"/><circle cx="360" cy="452" r="32"/></g>
+     <g fill="#b08d57"><circle cx="54" cy="372" r="2.5"/><circle cx="68" cy="386" r="2.5"/><circle cx="326" cy="378" r="2.5"/><circle cx="340" cy="392" r="2.5"/></g>
+     <!-- overhanging canopy -->
+     <g fill="#16301f"><circle cx="-10" cy="120" r="70"/><circle cx="50" cy="60" r="60"/><circle cx="20" cy="190" r="40"/><circle cx="420" cy="160" r="60"/><circle cx="380" cy="230" r="34"/></g>
+     <!-- lanterns -->
+     <g><line x1="140" y1="440" x2="140" y2="412" stroke="#b08d57" stroke-width="2"/><circle class="lamp" cx="140" cy="410" r="14" fill="url(#glow)"/><circle cx="140" cy="410" r="3" fill="#f3d79a"/>
+     <line x1="262" y1="440" x2="262" y2="412" stroke="#b08d57" stroke-width="2"/><circle class="lamp" cx="262" cy="410" r="14" fill="url(#glow)"/><circle cx="262" cy="410" r="3" fill="#f3d79a"/></g>
+    </svg>
+   </div>
+   <span class="arch-cap">Illustration</span>
+  </div>
+ </div>
+</section>
+
+<section class="proof" aria-label="At a glance">
+ <div class="wrap">
+  <div><b>5.0</b><span class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#7c5f2f"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#7c5f2f"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#7c5f2f"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#7c5f2f"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.7 5.6 6.1.9-4.4 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.2 7.5l6.1-.9z" fill="#7c5f2f"/></svg></span></div>
+  <span class="dot" aria-hidden="true"></span>
+  <div><b>63</b> <span>Google reviews</span></div>
+  <span class="dot" aria-hidden="true"></span>
+  <div><b>Smithtown</b> <span>White Oak Drive</span></div>
+  <span class="dot" aria-hidden="true"></span>
+  <div><b>Backyards</b> <span>most mentioned by clients</span></div>
+ </div>
+</section>
+
+<section class="services" id="services">
+ <div class="wrap">
+  <div class="sec-head">
+   <p class="orn center">What we do</p>
+   <h2>Five kinds of work, one standard.</h2>
+   <p>Each one is drawn from what Heritage Design Group's clients describe in their Google reviews.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Services">
+   <button role="tab" id="t0" aria-controls="p0" aria-selected="true">Backyard design</button>
+   <button role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1">Front yards</button>
+   <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Walkways</button>
+   <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Stonework</button>
+   <button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Decks</button>
+  </div>
+  <div class="panel" role="tabpanel" id="p0" aria-labelledby="t0">
+   <div>
+    <h3>Backyard design</h3>
+    <p>The work clients mention most. A backyard plan brings the patio, paths, plantings and places to sit into one design, so the yard feels finished instead of pieced together over the years.</p>
+    <span class="note">Most mentioned in reviews</span>
+    <ul><li>A plan for the whole yard</li><li>Patios, paths and gathering spots</li><li>Planting that frames the space</li></ul>
+   </div>
+   <div class="vignette"><svg viewBox="0 0 480 300" role="img" aria-label="Line drawing of a backyard plan with patio, path and plantings"><rect width="480" height="300" fill="#efe7d9"/><rect x="20" y="20" width="440" height="60" fill="#d9cab1" stroke="#1d3a2a" stroke-width="1.5"/><text x="240" y="56" text-anchor="middle" font-family="Nunito Sans,sans-serif" font-size="12" letter-spacing="3" fill="#1d3a2a">HOUSE</text><path d="M140 80h200v70H140z" fill="#cbb994" stroke="#7c6a4c"/><g stroke="#9c8762"><path d="M140 103h200M140 126h200M190 80v70M240 80v70M290 80v70"/></g><path d="M240 150 C 240 200, 300 210, 330 280" stroke="#cbb994" stroke-width="18" fill="none"/><g fill="#3f7454" stroke="#1d3a2a"><circle cx="70" cy="140" r="30"/><circle cx="90" cy="210" r="22"/><circle cx="410" cy="150" r="34"/><circle cx="420" cy="240" r="22"/><circle cx="160" cy="250" r="18"/></g><circle cx="300" cy="205" r="16" fill="#5d4c34" stroke="#1d3a2a"/></svg></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+   <div>
+    <h3>Front yard landscaping</h3>
+    <p>The first thing anyone sees. Planting beds, edging and a clear route to the door give a house a proper welcome from the street.</p>
+    <ul><li>Foundation and entry planting</li><li>Clean bed lines and edging</li><li>A front walk that leads somewhere</li></ul>
+   </div>
+   <div class="vignette"><svg viewBox="0 0 480 300" role="img" aria-label="Line drawing of a house front with planting beds and a walk"><rect width="480" height="300" fill="#efe7d9"/><path d="M120 200V110l120-60 120 60v90z" fill="#d9cab1" stroke="#1d3a2a" stroke-width="1.5"/><rect x="220" y="140" width="40" height="60" fill="#27503a"/><rect x="150" y="130" width="40" height="34" fill="#fff" stroke="#1d3a2a"/><rect x="290" y="130" width="40" height="34" fill="#fff" stroke="#1d3a2a"/><path d="M220 200 L200 300 H280 L260 200Z" fill="#cbb994" stroke="#7c6a4c"/><g fill="#3f7454" stroke="#1d3a2a"><ellipse cx="160" cy="205" rx="40" ry="18"/><ellipse cx="320" cy="205" rx="40" ry="18"/><circle cx="90" cy="190" r="26"/><circle cx="390" cy="190" r="26"/></g><g fill="#b08d57"><circle cx="150" cy="200" r="3"/><circle cx="170" cy="206" r="3"/><circle cx="312" cy="200" r="3"/><circle cx="332" cy="206" r="3"/></g><path d="M0 250 H200 M280 250 H480" stroke="#7c6a4c" stroke-dasharray="4 4"/></svg></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+   <div>
+    <h3>New walkways</h3>
+    <p>A walkway sets the pace of a yard. Straight and formal at the front door, or a relaxed curve of stepping stones out back to the patio.</p>
+    <ul><li>Front entry walks</li><li>Garden and stepping stone paths</li><li>Connections between patio, lawn and drive</li></ul>
+   </div>
+   <div class="vignette"><svg viewBox="0 0 480 300" role="img" aria-label="Line drawing of a curving stone walkway"><rect width="480" height="300" fill="#efe7d9"/><path d="M60 300 C 120 220, 340 220, 300 120 S 360 30, 420 0" stroke="#cbb994" stroke-width="56" fill="none"/><path d="M60 300 C 120 220, 340 220, 300 120 S 360 30, 420 0" stroke="#7c6a4c" stroke-width="58" fill="none" opacity=".15"/><g stroke="#9c8762" stroke-width="1.2"><path d="M70 255l40 22M115 230l30 30M160 212l22 34M210 203l12 38M262 200l0 38M300 180l-34 20M312 150l-48 0M310 120l-50 -8M318 90l-46 -18M340 60l-34 -30"/></g><g fill="#3f7454" stroke="#1d3a2a"><circle cx="70" cy="170" r="30"/><circle cx="400" cy="200" r="36"/><circle cx="190" cy="80" r="26"/></g></svg></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+   <div>
+    <h3>Stonework</h3>
+    <p>Clients call it "amazing and artistic." Walls, steps and patios built by hand, with each stone chosen and set to sit right with its neighbors.</p>
+    <ul><li>Retaining and garden walls</li><li>Steps and landings</li><li>Stone patios and borders</li></ul>
+   </div>
+   <div class="vignette"><svg viewBox="0 0 480 300" role="img" aria-label="Line drawing of a dry-laid stone wall with steps"><rect width="480" height="300" fill="#efe7d9"/><g fill="#cbb994" stroke="#7c6a4c" stroke-width="1.4"><path d="M20 150h90l-4 30H22zM112 150h70v30h-72zM184 152h80l-2 28h-78zM20 182h60v32H20zM82 182h100v32H82zM184 182h76v32h-76zM20 216h110v34H20zM132 216h60v34h-60zM194 216h70v34h-70z"/><path d="M270 180h190v30H270zM300 214h160v36H300zM330 150h130v26H330z"/><path d="M264 250h196v30H264z"/></g><path d="M0 280H480" stroke="#1d3a2a"/><g fill="#3f7454" stroke="#1d3a2a"><circle cx="60" cy="120" r="30"/><circle cx="420" cy="118" r="30"/></g></svg></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+   <div>
+    <h3>Decks</h3>
+    <p>A deck stretches the house out into the yard. Planned together with the landscape around it, the steps land where the paths begin.</p>
+    <ul><li>Decks planned with the yard</li><li>Steps that meet the path</li><li>Planting to soften the edges</li></ul>
+   </div>
+   <div class="vignette"><svg viewBox="0 0 480 300" role="img" aria-label="Line drawing of a deck with stairs leading to a path"><rect width="480" height="300" fill="#efe7d9"/><rect x="20" y="20" width="440" height="50" fill="#d9cab1" stroke="#1d3a2a" stroke-width="1.5"/><rect x="80" y="70" width="320" height="130" fill="#c69f6c" stroke="#5d4c34" stroke-width="1.5"/><g stroke="#8f6b3f"><path d="M80 86h320M80 102h320M80 118h320M80 134h320M80 150h320M80 166h320M80 182h320"/></g><g fill="#b08b5c" stroke="#5d4c34"><rect x="210" y="200" width="60" height="14"/><rect x="210" y="214" width="60" height="14"/><rect x="210" y="228" width="60" height="14"/></g><path d="M240 242 C 240 270, 260 280, 300 300" stroke="#cbb994" stroke-width="24" fill="none"/><g fill="#3f7454" stroke="#1d3a2a"><circle cx="50" cy="200" r="28"/><circle cx="430" cy="210" r="30"/><circle cx="150" cy="230" r="18"/></g></svg></div>
+  </div>
+ </div>
+</section>
+
+<section class="planner" id="planner">
+ <div class="wrap pl-grid">
+  <div>
+   <span class="sample-tag">Sample tool</span>
+   <h2>Build your backyard.</h2>
+   <p style="color:var(--muted);margin-top:var(--s3)">Switch elements on and off to sketch the yard you want. Turn on lighting to see it at dusk. Then take your list into a consultation.</p>
+   <ul class="toggles">
+    <li><label for="e-patio"><span>Patio<small>Stone or paver, off the back door</small></span><span class="switch"><input type="checkbox" id="e-patio" data-el="patio" checked><i></i></span></label></li>
+    <li><label for="e-walk"><span>Walkway<small>Stepping stones across the lawn</small></span><span class="switch"><input type="checkbox" id="e-walk" data-el="walk" checked><i></i></span></label></li>
+    <li><label for="e-fire"><span>Fire pit<small>A stone ring with seating</small></span><span class="switch"><input type="checkbox" id="e-fire" data-el="fire"><i></i></span></label></li>
+    <li><label for="e-plant"><span>Plantings<small>Borders, shrubs and a shade tree</small></span><span class="switch"><input type="checkbox" id="e-plant" data-el="plant" checked><i></i></span></label></li>
+    <li><label for="e-light"><span>Lighting<small>Path and patio lights, shown at dusk</small></span><span class="switch"><input type="checkbox" id="e-light" data-el="light"><i></i></span></label></li>
+   </ul>
+  </div>
+  <div>
+   <div class="yard" id="yard">
+    <svg viewBox="0 0 640 440" role="img" aria-label="Top-down sketch of a backyard showing the elements you have switched on" id="yardSvg">
+     <defs>
+      <pattern id="pv" width="22" height="22" patternUnits="userSpaceOnUse"><rect width="22" height="22" fill="#d6c6a6"/><path d="M0 0h22M0 11h22M0 0v11M11 11v11" stroke="#a8946d" stroke-width="1"/></pattern>
+      <radialGradient id="lg"><stop offset="0" stop-color="#ffe2a0" stop-opacity=".95"/><stop offset="1" stop-color="#ffe2a0" stop-opacity="0"/></radialGradient>
+     </defs>
+     <rect width="640" height="440" fill="#7fa36a"/>
+     <g stroke="#88ad72" stroke-width="22"><path d="M0 120H640M0 164H640M0 208H640M0 252H640M0 296H640M0 340H640M0 384H640M0 428H640"/></g>
+     <rect x="0" y="0" width="640" height="96" fill="#d9cab1" stroke="#1d3a2a" stroke-width="2"/>
+     <text x="320" y="54" text-anchor="middle" font-family="Nunito Sans,sans-serif" font-size="13" letter-spacing="4" fill="#1d3a2a">HOUSE</text>
+     <rect x="300" y="88" width="40" height="8" fill="#1d3a2a"/>
+     <path d="M0 438H640M2 96V438M638 96V438" stroke="#7c6a4c" stroke-width="4" stroke-dasharray="2 8"/>
+     <g class="el" data-g="patio"><rect x="200" y="96" width="240" height="110" fill="url(#pv)" stroke="#5d4c34" stroke-width="2"/><g fill="#efe7d9" stroke="#5d4c34"><rect x="240" y="130" width="34" height="34" rx="4"/><rect x="366" y="130" width="34" height="34" rx="4"/><circle cx="320" cy="147" r="24"/></g></g>
+     <g class="el" data-g="walk" fill="#d6c6a6" stroke="#5d4c34" stroke-width="1.5"><ellipse cx="322" cy="226" rx="24" ry="12"/><ellipse cx="350" cy="258" rx="24" ry="12"/><ellipse cx="392" cy="284" rx="24" ry="12"/><ellipse cx="438" cy="302" rx="24" ry="12"/></g>
+     <g class="el" data-g="fire"><circle cx="490" cy="340" r="70" fill="#cdbb95" stroke="#5d4c34" stroke-width="2"/><circle cx="490" cy="340" r="26" fill="#5d4c34" stroke="#2a2216" stroke-width="3"/><path d="M482 346 Q486 326 490 316 Q495 328 498 346Z" fill="#f0a742"/><circle class="dusk" cx="490" cy="336" r="48" fill="url(#lg)"/><g fill="#efe7d9" stroke="#5d4c34"><rect x="420" y="320" width="20" height="40" rx="4"/><rect x="540" y="320" width="20" height="40" rx="4"/><rect x="470" y="388" width="40" height="18" rx="4"/></g></g>
+     <g class="el" data-g="plant"><path d="M0 96 H150 Q120 170 60 210 Q20 240 0 330Z" fill="#4c7a52" stroke="#1d3a2a" stroke-width="1.5"/><g fill="#386644" stroke="#1d3a2a"><circle cx="40" cy="130" r="26"/><circle cx="90" cy="150" r="18"/><circle cx="34" cy="200" r="20"/><circle cx="600" cy="140" r="30"/><circle cx="610" cy="210" r="20"/></g><circle cx="120" cy="360" r="62" fill="#2f5a40" stroke="#1d3a2a" stroke-width="2" opacity=".92"/><circle cx="120" cy="360" r="5" fill="#1d3a2a"/><g fill="#d9b36c"><circle cx="30" cy="124" r="3"/><circle cx="48" cy="138" r="3"/><circle cx="96" cy="146" r="3"/><circle cx="594" cy="132" r="3"/><circle cx="608" cy="148" r="3"/></g></g>
+     <rect class="dusk" width="640" height="440" fill="#0d1d2b" fill-opacity=".42"/>
+     <g class="el" data-g="light">
+      <g class="dusk"><circle cx="210" cy="104" r="40" fill="url(#lg)"/><circle cx="430" cy="104" r="40" fill="url(#lg)"/><circle cx="300" cy="244" r="34" fill="url(#lg)"/><circle cx="414" cy="300" r="34" fill="url(#lg)"/><circle cx="160" cy="300" r="40" fill="url(#lg)"/></g>
+      <g fill="#ffe8b0" stroke="#7c5f2f"><circle cx="210" cy="104" r="5"/><circle cx="430" cy="104" r="5"/><circle cx="300" cy="244" r="5"/><circle cx="414" cy="300" r="5"/><circle cx="160" cy="300" r="5"/></g>
+     </g>
+    </svg>
+   </div>
+   <div class="wish">
+    <p id="wishText">Your list: <b>patio, walkway, plantings</b></p>
+    <a class="btn btn-green" href="#book" id="wishBtn">Bring this list to a consultation</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="reviews" id="reviews">
+ <div class="wrap">
+  <div class="sec-head">
+   <p class="orn center">In their words</p>
+   <h2>What Smithtown neighbors say.</h2>
+  </div>
+  <div class="rv-grid">
+   <figure class="rv-main">
+    <blockquote>I cannot recommend Ray, Johnathan, and the team from Heritage Design Group enough.</blockquote>
+    <figcaption>Patrick M., Google review</figcaption>
+   </figure>
+   <div class="rv-side">
+    <figure><blockquote>His workers are craftsmen driven by the satisfaction of a job well done.</blockquote><figcaption>Google review</figcaption></figure>
+    <figure><blockquote>Stone work also amazing and artistic.</blockquote><figcaption>Google review</figcaption></figure>
+    <figure><blockquote>I am so happy with the outcome of my landscaping at my home.</blockquote><figcaption>Google review</figcaption></figure>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="booking on-dark" id="book" aria-labelledby="bk-h">
+ <div class="wrap">
+  <div class="bk-head">
+   <div>
+    <p class="orn">Featured add-on in this concept</p>
+    <h2 id="bk-h">Book a design consultation online.</h2>
+    <p style="margin-top:var(--s3)">Homeowners pick a weekday and a time that suits them, any hour of the day, instead of waiting for a call back.</p>
+   </div>
+   <div class="price-box">
+    <div class="p">$400<small>from, one-time setup</small></div>
+    <ul><li>Day and time picker matched to your schedule</li><li>Confirmation details for the homeowner</li><li>Requests delivered to your inbox or calendar</li></ul>
+   </div>
+  </div>
+  <form class="bk-card" id="bkForm" data-demo data-done="done1" novalidate>
+   <div>
+    <h3>1. Choose a day</h3>
+    <div class="days" id="days" role="radiogroup" aria-label="Available weekdays"></div>
+    <p class="grp-err" id="dayErr">Please choose a day.</p>
+    <h3 style="margin-top:var(--s5)">2. Choose a time</h3>
+    <div class="times" role="radiogroup" aria-label="Available times">
+     <label><input type="radio" name="time" value="9:00 AM">9:00 AM</label>
+     <label><input type="radio" name="time" value="11:00 AM">11:00 AM</label>
+     <label><input type="radio" name="time" value="1:00 PM">1:00 PM</label>
+     <label><input type="radio" name="time" value="3:00 PM">3:00 PM</label>
+     <label><input type="radio" name="time" value="4:30 PM">4:30 PM</label>
+     <label><input type="radio" name="time" value="6:00 PM">6:00 PM</label>
+    </div>
+    <p class="grp-err" id="timeErr">Please choose a time.</p>
+    <p class="choice" id="choice" aria-live="polite">No time chosen yet.</p>
+   </div>
+   <div>
+    <h3>3. Your details</h3>
+    <div class="field"><label for="b-name">Name *</label><input id="b-name" required autocomplete="name"><span class="msg">Please add your name.</span></div>
+    <div class="field"><label for="b-phone">Phone *</label><input id="b-phone" type="tel" required autocomplete="tel"><span class="msg">Please add a phone number.</span></div>
+    <div class="field"><label for="b-email">Email</label><input id="b-email" type="email" autocomplete="email"><span class="msg">That email looks incomplete.</span></div>
+    <div class="field"><label for="b-town">Town *</label><input id="b-town" required><span class="msg">Which town is the home in?</span></div>
+    <div class="field"><label for="b-notes">What would you like to talk about?</label><textarea id="b-notes"></textarea></div>
+    <button class="btn btn-green" type="submit" style="width:100%">Request this consultation</button>
+    <p class="demo-note">Demo form. This is a website concept. Nothing is sent or saved.</p>
+   </div>
+  </form>
+  <div class="done" id="done1" hidden tabindex="-1">
+   <h3>Demo complete.</h3>
+   <p id="doneText">This is a website concept, so nothing was sent or saved, and no appointment was booked.</p>
+   <button class="btn btn-green restart" type="button">Start over</button>
+  </div>
+  <p class="sample-note">Sample feature. The days update from today's date, but the times are placeholders and no real calendar is checked. On a live site, times would come from Heritage Design Group's own schedule.</p>
+ </div>
+</section>
+
+<section class="visit" id="visit">
+ <div class="wrap">
+  <div class="sec-head">
+   <p class="orn center">Visit and call</p>
+   <h2>Based in Smithtown.</h2>
+  </div>
+  <div class="vs">
+   <div><h3>Address</h3><p>3 White Oak Drive<br>Smithtown, NY 11787</p></div>
+   <div><h3>Hours</h3><table class="hours"><tbody><tr><td>Monday to Friday</td><td>Until 7 PM</td></tr><tr><td>Saturday and Sunday</td><td>Call for hours</td></tr></tbody></table></div>
+   <div><h3>Phone</h3><a class="tel" href="tel:+16315435040">(631) 543-5040</a><p>Reviews mention Ray, Jonathan and the team.</p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="ft">
+   <div><h4>Heritage Design Group Inc.</h4><p>3 White Oak Drive, Smithtown, NY 11787</p><p>Monday to Friday until 7 PM</p></div>
+   <div><h4>Call</h4><p><a href="tel:+16315435040">(631) 543-5040</a></p></div>
+   <div><h4>On this page</h4><p><a href="#services">Services</a></p><p><a href="#planner">Build your backyard</a></p><p><a href="#book">Book a consultation</a></p></div>
+  </div>
+  <p class="disc">Independent website concept designed by Lisette Colon. Not affiliated with or approved by Heritage Design Group Inc. Address, hours, rating and review quotes are from the business's public Google listing, checked October 2026. Service descriptions are written from the listing and reviews, details to confirm with the owner. All drawings are illustrations, not real projects. The backyard planner, online booking and consultation form are sample features: booking times are placeholders, and nothing entered here is sent or saved.</p>
+ </div>
+</footer>
+<a class="btn btn-brass sticky-call" href="tel:+16315435040">Call (631) 543-5040</a>
+
+<script>
+(function(){
+ const btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+ btn.addEventListener('click',()=>{const o=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!o));nav.classList.toggle('open',!o)});
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{btn.setAttribute('aria-expanded','false');nav.classList.remove('open')}));
+
+ // tabs
+ const tabs=[...document.querySelectorAll('[role=tab]')];
+ function sel(i,focus){tabs.forEach((t,k)=>{const on=k===i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on});if(focus)tabs[i].focus()}
+ tabs.forEach((t,i)=>{t.addEventListener('click',()=>sel(i));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();sel((i+1)%tabs.length,true)}if(e.key==='ArrowLeft'){e.preventDefault();sel((i-1+tabs.length)%tabs.length,true)}})});
+
+ // planner
+ const yard=document.getElementById('yard'),names={patio:'patio',walk:'walkway',fire:'fire pit',plant:'plantings',light:'lighting'};
+ const sw=[...document.querySelectorAll('.toggles input')];
+ function upd(){
+  const on=[];
+  sw.forEach(i=>{const g=yard.querySelector('[data-g="'+i.dataset.el+'"]');g.classList.toggle('on',i.checked);if(i.checked)on.push(names[i.dataset.el])});
+  yard.classList.toggle('lit',document.getElementById('e-light').checked);
+  document.getElementById('wishText').innerHTML=on.length?'Your list: <b>'+on.join(', ')+'</b>':'Your list is empty. Switch something on.';
+  return on;
+ }
+ sw.forEach(i=>i.addEventListener('change',upd));upd();
+ document.getElementById('wishBtn').addEventListener('click',()=>{const on=upd();if(on.length)document.getElementById('b-notes').value='Backyard ideas: '+on.join(', ')+'.'});
+
+ // booking days: next 10 weekdays
+ const days=document.getElementById('days');const D=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ let d=new Date();d.setHours(12,0,0,0);let n=0;
+ while(n<10){d.setDate(d.getDate()+1);const w=d.getDay();if(w===0||w===6)continue;
+  const lab=document.createElement('label');const val=D[w]+' '+M[d.getMonth()]+' '+d.getDate();
+  lab.innerHTML='<input type="radio" name="day" value="'+val+'"><small>'+D[w]+'</small><b>'+d.getDate()+'</b><span>'+M[d.getMonth()]+'</span>';
+  days.appendChild(lab);n++;}
+ const form=document.getElementById('bkForm'),choice=document.getElementById('choice');
+ function showChoice(){const dd=form.querySelector('input[name=day]:checked'),tt=form.querySelector('input[name=time]:checked');
+  choice.textContent=dd||tt?'Selected: '+(dd?dd.value:'choose a day')+(tt?' at '+tt.value:', choose a time'):'No time chosen yet.';
+  if(dd)document.getElementById('dayErr').classList.remove('show');if(tt)document.getElementById('timeErr').classList.remove('show')}
+ form.addEventListener('change',e=>{if(e.target.name==='day'||e.target.name==='time')showChoice()});
+
+ // demo form
+ const done=document.getElementById('done1');
+ form.addEventListener('submit',e=>{
+  e.preventDefault();let first=null;
+  const dd=form.querySelector('input[name=day]:checked'),tt=form.querySelector('input[name=time]:checked');
+  document.getElementById('dayErr').classList.toggle('show',!dd);document.getElementById('timeErr').classList.toggle('show',!tt);
+  if(!dd)first=form.querySelector('input[name=day]');else if(!tt)first=form.querySelector('input[name=time]');
+  form.querySelectorAll('.field input,.field textarea').forEach(el=>{
+   const v=el.value.trim();let bad=el.required&&!v;if(el.type==='email'&&v&&!/^\S+@\S+\.\S+$/.test(v))bad=true;
+   el.closest('.field').classList.toggle('err',bad);el.setAttribute('aria-invalid',bad?'true':'false');if(bad&&!first)first=el;
+  });
+  if(first){first.focus();return}
+  document.getElementById('doneText').textContent='You picked '+dd.value+' at '+tt.value+'. This is a website concept, so nothing was sent or saved, and no appointment was booked.';
+  form.hidden=true;done.hidden=false;done.focus();
+ });
+ done.querySelector('.restart').addEventListener('click',()=>{form.reset();form.querySelectorAll('.err').forEach(x=>x.classList.remove('err'));showChoice();form.hidden=false;done.hidden=true;form.querySelector('input').focus()});
+})();
+</script>
+</body>
+</html>
